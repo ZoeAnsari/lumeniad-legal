@@ -1,7 +1,7 @@
 # WellGate Privacy Policy
 
 **Last updated:** July 2026  
-**Contact:** support@wellgate.app
+**Contact:** wellgate.support@lumeniad.com
 
 ## Overview
 
@@ -40,7 +40,7 @@ Explorer payloads use a rotating anonymous `installId`. Data is retained up to *
 
 ## Your rights
 
-You may request deletion of Explorer analytics tied to your `installId` by emailing support@wellgate.app. You can switch to BlackBox in settings at any time (billing may differ).
+You may request deletion of Explorer analytics tied to your `installId` by emailing wellgate.support@lumeniad.com. You can switch to BlackBox in settings at any time (billing may differ).
 
 ## Children
 

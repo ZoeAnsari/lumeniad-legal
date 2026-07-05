@@ -1,7 +1,7 @@
 # WellGate Terms of Service
 
 **Last updated:** July 2026  
-**Contact:** support@wellgate.app
+**Contact:** wellgate.support@lumeniad.com
 
 ## Service
 
@@ -16,7 +16,7 @@ A **3-day free trial** may be offered for new installs. **Beta invite codes** ma
 
 ## Billing
 
-Subscriptions are billed monthly via **Stripe** in DKK unless otherwise stated. Cancel anytime through Stripe customer portal (link provided after purchase). Refund requests: contact support@wellgate.app within 14 days of charge.
+Subscriptions are billed monthly via **Stripe** in DKK unless otherwise stated. Cancel anytime through Stripe customer portal (link provided after purchase). Refund requests: contact wellgate.support@lumeniad.com within 14 days of charge.
 
 ## Acceptable use
 
