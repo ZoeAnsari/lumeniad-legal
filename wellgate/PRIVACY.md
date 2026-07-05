@@ -5,7 +5,7 @@
 
 ## Overview
 
-WellGate is a browser extension that helps you stay intentional on supported social sites. This policy describes how we handle data in **BlackBox** and **Explorer** modes.
+WellGate is a browser extension that helps you stay intentional on supported social sites. This policy describes how we handle data in **BlackBox** and **Explorer** modes, and how **Stripe** processes billing-related information.
 
 ## BlackBox mode
 
@@ -26,6 +26,8 @@ We do **not** collect page content, usernames, search queries, or cross-site bro
 
 Explorer payloads use a rotating anonymous `installId`. Data is retained up to **90 days**, then deleted via TTL.
 
+If you **switch from Explorer to BlackBox** (in the extension or via Stripe when changing plan), new Explorer analytics are not sent after the change. Previously ingested anonymous summaries remain subject to the retention period unless you request deletion.
+
 ## Data stored locally
 
 - Profile and settings
@@ -35,12 +37,27 @@ Explorer payloads use a rotating anonymous `installId`. Data is retained up to *
 
 ## Third-party services
 
-- **Stripe** — payment processing (subject to [Stripe Privacy Policy](https://stripe.com/privacy))
-- **AWS** (Lambda, DynamoDB) — license validation, beta codes, anonymous Explorer ingest
+### Stripe (payments and subscription management)
+
+We use [Stripe](https://stripe.com) for checkout, recurring billing, and the **Stripe Customer Portal** (manage subscription, switch between Explorer and BlackBox, update card, cancel).
+
+Depending on your actions, Stripe may process:
+
+- Name, email, and payment method details (we do not store full card numbers on our servers)
+- Subscription plan, invoices, and billing history
+- **Cancellation reasons** if you cancel through the Customer Portal (collected by Stripe according to your portal settings)
+
+Stripe’s use of this data is governed by the [Stripe Privacy Policy](https://stripe.com/privacy). When you use the Customer Portal, you interact directly with Stripe-hosted pages for payment and subscription changes.
+
+### AWS (Lambda, DynamoDB)
+
+Our API stores license status, beta redemption metadata, and (for Explorer only) anonymous analytics ingest. We store Stripe customer and subscription identifiers linked to your license where needed to validate access — not your full payment details.
 
 ## Your rights
 
-You may request deletion of Explorer analytics tied to your `installId` by emailing wellgate.support@lumeniad.com. You can switch to BlackBox in settings at any time (billing may differ).
+- Request **deletion of Explorer analytics** tied to your `installId` by emailing wellgate.support@lumeniad.com.
+- **Cancel or change plan** via the Stripe Customer Portal (see Terms of Service). Cancellation takes effect at the **end of the current billing period** unless Stripe shows a different date at confirm time.
+- Switch privacy mode in WellGate settings; paid plan and billing are managed in Stripe and must stay consistent with your subscription.
 
 ## Children
 
